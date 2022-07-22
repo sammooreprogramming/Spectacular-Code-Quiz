@@ -20,3 +20,21 @@ let questions = [
         choices: ["A  creates a document", "B creates a variable", "C creates a function", "creates parameters"],
         answer: "B creates a variable"
     }]
+
+
+    //variable declaration
+    var startBtn = document.querySelector("#Start-btn");
+    let time = 0;
+    let clockLeft = 60;
+
+    //start button function creation and rednering of the function
+    function startQuiz() {
+       startBtn.addEventListener("click", function () {
+        if (time === 0) {
+            time = setInterval(function () {
+                clockLeft--;
+                "currenttime".textContent = "Time: " + clockLeft;
+            })
+        }
+       })
+    }
