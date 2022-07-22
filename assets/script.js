@@ -25,40 +25,72 @@
 
     // variable declaration
     //buttons
-    var homepageBtn = document.querySelector("#homepage-btn");
-    var scoreSettingBtn = document.querySelector("#score-setting-btn");
-    var buttonA = document.querySelector("#buttonA");
-    var buttonB = document.querySelector("#buttonB");
-    var buttonC = document.querySelector("#buttonC");
-    var buttonD = document.querySelector("#buttonD");
-    var leaderboardBtn = document.querySelector("#leaderboard-btn");
-    var startBtn = document.querySelector("#start-btn");
+    let homepageBtn = document.querySelector("#homepage-btn");
+    let scoreSettingBtn = document.querySelector("#score-setting-btn");
+    let buttonA = document.querySelector("#buttonA");
+    let buttonB = document.querySelector("#buttonB");
+    let buttonC = document.querySelector("#buttonC");
+    let buttonD = document.querySelector("#buttonD");
+    let leaderboardBtn = document.querySelector("#leaderboard-btn");
+    let startBtn = document.querySelector("#start-btn");
     // container variables
-    var homepageCard = document.getElementById("card-homepage");
-    var quizCard = document.getElementById("card-quiz");
-    var recapCard = document.getElementById("card-recap");
-    var leaderboardCard = document.getElementById("card-leaderboard");
+    let homepageCard = document.getElementById("card-homepage");
+    let quizCard = document.getElementById("card-quiz");
+    let recapCard = document.getElementById("card-recap");
+    let leaderboardCard = document.getElementById("card-leaderboard");
     // time variables
+    let timerContainer = document.getElementById("timer-container");
     let time = 0;
     let clockLeft = 60;
-    // 
+    // other variables
+    let correctAnswer;
+    let wrongAnswer;
 
 
 
-    //start button function creation and rednering of the function
-    function startQuiz() {
-       startBtn.addEventListener("click", function () {
-        if (time === 0) {
-            time = setInterval(function () {
-                clockLeft--;
-                clockLeft.textContent = "Time: " + clockLeft;
-            })
-        } else if (clockLeft = 0) {
-           quizOver();
-        }
-       })
+
+
+    //functions
+    function showHomepage() {
+        homepageCard.style.display = "block";
+        quizCard.style.display = "none";
+        recapCard.style.display = "none";
+        leaderboardCard.style.display = "none";
+
     }
 
- function quizOver() {
+    function showQuiz() {
+        homepageCard.style.display = "none";
+        quizCard.style.display = "block";
+        recapCard.style.display = "none";
+        leaderboardCard.style.display = "none";
+    }
 
- }
+    function showRecap() {
+        homepageCard.style.display = "none";
+        quizCard.style.display = "none";
+        recapCard.style.display = "block";
+        leaderboardCard.style.display = "none";
+    }
+
+    function showLeaderboard() {
+        homepageCard.style.display = "none";
+        quizCard.style.display = "none";
+        recapCard.style.display = "none";
+        leaderboardCard.style.display = "block";
+    }
+
+    showHomepage();
+ 
+    // function createQuestionsAndAnswers() {
+        
+    // }
+
+
+
+    function quizStart() {
+    startBtn.onclick = function() {
+        showQuiz();
+
+    }
+    }
