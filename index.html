@@ -11,7 +11,7 @@
 <body>
     <header>
         <div id="view-highscore-btn">
-            <button type="button" id="view-highscores">View Leaderboards Here!</button>
+            <button type="button" id="leaderboard-btn">View Leaderboards Here!</button>
         </div>
 
         <div id="timer-container">
@@ -28,10 +28,10 @@
     <div id="card-quiz" class="card">
         <div id="answer-choice-container">
             <ul>
-                <button type="button" class="btn btn-default btn-lg" id="buttonA" value="A">A</button>
-                <button type="button" class="btn btn-default btn-lg" id="buttonB" value="B">B</button>
-                <button type="button" class="btn btn-default btn-lg" id="buttonC" value="C">C</button>
-                <button type="button" class="btn btn-default btn-lg" id="buttonD" value="D">D</button>
+                <button type="button" class="btn btn-default btn-lg" id="buttonA">A</button>
+                <button type="button" class="btn btn-default btn-lg" id="buttonB">B</button>
+                <button type="button" class="btn btn-default btn-lg" id="buttonC">C</button>
+                <button type="button" class="btn btn-default btn-lg" id="buttonD">D</button>
             </ul>
          </div>
     </div>
@@ -42,11 +42,12 @@
         <button id="score-setting-btn" type="button">Submit your score!</button>
     </div>
 
-    <div id="leaderboard">
+    <div id="card-leaderboard" class="card">
         <p>High Scores!</p>
         <ul>
             <!------input from appended scores go here------->
         </ul>
+        <button id="homepage-btn" type="button">Homepage</button>
     </div>
 
 

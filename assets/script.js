@@ -1,5 +1,5 @@
 // Questions Array
-let questions = [
+    let questions = [
     {
         question: "The div element is what exactly?",
         choices: ["A a container", "B a divider", "C a function", "D a page"],
@@ -7,8 +7,8 @@ let questions = [
     },
     {
         question: "What symbol represents a terminator?",
-        choices: ["A a ';'", "B a '%'", "C a '&'", "D a '*'"],
-        answer: "A a ';'"
+        choices: ["A a semicolon", "B a '%'", "C a '&'", "D a '*'"],
+        answer: "A a semicolon."
     },
     {
         question: "I'm glad I have _______ to apply the functionality.",
@@ -19,13 +19,24 @@ let questions = [
         question: "What does the var command do?",
         choices: ["A  creates a document", "B creates a variable", "C creates a function", "creates parameters"],
         answer: "B creates a variable"
-    }]
+    }
+    ];
 
 
     //variable declaration
+    var homepageBtn = document.querySelector("#homepage-btn");
+    var scoreSettingBtn = document.querySelector("#score-setting-btn");
+    var buttonA = document.querySelector("buttonA");
+    var buttonB = document.querySelector("buttonB");
+    var buttonC = document.querySelector("buttonC");
+    var buttonD = document.querySelector("buttonD");
+    var leaderboardBtn = document.querySelector("#leaderboard-btn");
     var startBtn = document.querySelector("#Start-btn");
     let time = 0;
     let clockLeft = 60;
+
+
+
 
     //start button function creation and rednering of the function
     function startQuiz() {
