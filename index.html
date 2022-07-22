@@ -19,39 +19,36 @@
         </div>
     </header>
 
-    <div id="card-homepage" class="card">
-            <h2>Spectacular Coding Quiz!</h2>
-        <h3>Answer all questions within a minute! Wrong answers lose time. Your time is your score.</h3>
-        <button type="button" id="Start-btn">Start!</button>
-    </div>
-    
-    <div id="card-quiz" class="card">
-        <div id="answer-choice-container">
+        <div id="card-homepage" class="card">
+                <h2>Spectacular Coding Quiz!</h2>
+            <h3>Answer all questions within a minute! Wrong answers lose time. Your time is your score.</h3>
+            <button type="button" id="start-btn">Start!</button>
+        </div>
+        
+        <div id="card-quiz" class="card">
+            <div id="answer-choice-container">
+                <ul>
+                    <button type="button" class="btn btn-default btn-lg" id="buttonA">A</button>
+                    <button type="button" class="btn btn-default btn-lg" id="buttonB">B</button>
+                    <button type="button" class="btn btn-default btn-lg" id="buttonC">C</button>
+                    <button type="button" class="btn btn-default btn-lg" id="buttonD">D</button>
+                </ul>
+            </div>
+        </div>
+
+        <div id="card-recap" class="card">
+            <p>Game Over! Your Score is: </p>
+            <input type="text" id="initial-box" placeholder="Enter your initials here!"></input>
+            <button id="score-setting-btn" type="button">Submit your score!</button>
+        </div>
+
+        <div id="card-leaderboard" class="card">
+            <p>High Scores!</p>
             <ul>
-                <button type="button" class="btn btn-default btn-lg" id="buttonA">A</button>
-                <button type="button" class="btn btn-default btn-lg" id="buttonB">B</button>
-                <button type="button" class="btn btn-default btn-lg" id="buttonC">C</button>
-                <button type="button" class="btn btn-default btn-lg" id="buttonD">D</button>
+                <!------input from appended scores go here------->
             </ul>
-         </div>
-    </div>
-
-    <div id="card-recap" class="card">
-        <p>Game Over! Your Score is: </p>
-        <input type="text" id="initial-box" placeholder="Enter your initials here!"></input>
-        <button id="score-setting-btn" type="button">Submit your score!</button>
-    </div>
-
-    <div id="card-leaderboard" class="card">
-        <p>High Scores!</p>
-        <ul>
-            <!------input from appended scores go here------->
-        </ul>
-        <button id="homepage-btn" type="button">Homepage</button>
-    </div>
-
-
-
+            <button id="homepage-btn" type="button">Homepage</button>
+        </div>
 
     <script src="./assets/script.js"></script>
 </body>

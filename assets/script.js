@@ -23,18 +23,25 @@
     ];
 
 
-    //variable declaration
+    // variable declaration
+    //buttons
     var homepageBtn = document.querySelector("#homepage-btn");
     var scoreSettingBtn = document.querySelector("#score-setting-btn");
-    var buttonA = document.querySelector("buttonA");
-    var buttonB = document.querySelector("buttonB");
-    var buttonC = document.querySelector("buttonC");
-    var buttonD = document.querySelector("buttonD");
+    var buttonA = document.querySelector("#buttonA");
+    var buttonB = document.querySelector("#buttonB");
+    var buttonC = document.querySelector("#buttonC");
+    var buttonD = document.querySelector("#buttonD");
     var leaderboardBtn = document.querySelector("#leaderboard-btn");
-    var startBtn = document.querySelector("#Start-btn");
+    var startBtn = document.querySelector("#start-btn");
+    // container variables
+    var homepageCard = document.getElementById("card-homepage");
+    var quizCard = document.getElementById("card-quiz");
+    var recapCard = document.getElementById("card-recap");
+    var leaderboardCard = document.getElementById("card-leaderboard");
+    // time variables
     let time = 0;
     let clockLeft = 60;
-
+    // 
 
 
 
@@ -44,8 +51,14 @@
         if (time === 0) {
             time = setInterval(function () {
                 clockLeft--;
-                "currenttime".textContent = "Time: " + clockLeft;
+                clockLeft.textContent = "Time: " + clockLeft;
             })
+        } else if (clockLeft = 0) {
+           quizOver();
         }
        })
     }
+
+ function quizOver() {
+
+ }
